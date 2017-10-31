@@ -1,0 +1,15 @@
+<h1>Users#edit</h1>
+<p>Find me in app/views/users/edit.html.erb</p>
+
+
+
+<%= form_tag user_path, method: :put do %>
+ 
+  <%= label_tag 'email', 'Email' %>
+  <%= text_field_tag 'email' %>
+ 
+  <%= label_tag 'password', 'Password' %>
+  <%= password_field_tag 'password' %>
+ 
+  <%= submit_tag "Edit an user !"%>
+<% end %>
