@@ -16,6 +16,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.save
+    lgo_in @user
+    flash[:success] = "Welcome to our app !"
+    redirect_to @user
   end
 
   def update
